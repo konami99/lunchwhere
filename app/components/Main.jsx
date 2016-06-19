@@ -2,6 +2,13 @@ var React = require('react');
 var Nav = require('Nav');
 
 var Main = React.createClass({
+    getInitialState: function() {
+        return {
+            isLoggedIn: false,
+            users: [],
+            votes: []
+        }
+    },
     render: function(){
         return (
             <div>
