@@ -11,8 +11,6 @@ var Main = React.createClass({
         }
     },
     handleLoggedIn: function(id, username){
-        console.log(id);
-        console.log(username);
         this.setState({
             isLoggedIn: true,
             userid: id,
@@ -20,7 +18,11 @@ var Main = React.createClass({
         });
     },
     handleLoggedOut: function(){
-        console.log('here!');
+        this.setState({
+            isLoggedIn: false,
+            userid: '',
+            username: ''
+        });
     },
     render: function(){
         var isLoggedIn = this.state.isLoggedIn;
