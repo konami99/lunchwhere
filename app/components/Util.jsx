@@ -26,7 +26,8 @@ var Util =
             {
                 id: (PlacesMock.length+1),
                 title: title,
-                description: description
+                description: description,
+                votes: []
             }
         )
     },
