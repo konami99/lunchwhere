@@ -2,6 +2,7 @@ var React = require('react');
 var {Link} = require('react-router');
 var PlacesMock = require('PlacesMock');
 var Util = require('Util');
+var VoteButton = require('VoteButton');
 
 var PlacesList = React.createClass({
 
@@ -14,7 +15,7 @@ var PlacesList = React.createClass({
                 <tr key={place.id}>
                     <td>{place.title}</td>
                     <td>{place.description}</td>
-                    <td>{renderOptions()}</td>
+                    <td><VoteButton placeId={place.id}/></td>
                 </tr>
             );
         };
