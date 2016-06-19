@@ -6,14 +6,14 @@ var PlacesList = React.createClass({
     render: function(){
         var createRow = function(place){
             return (
-                <div>
+                <tr key={place.id}>
                     <td>11</td>
                     <td>22</td>
                     <td>33</td>
-                </div>
+                </tr>
             );
         };
-        return <tr>{PlacesMock.map(createRow)}</tr>;
+        return <tbody>{PlacesMock.map(createRow)}</tbody>;
     }
 });
 
@@ -29,9 +29,9 @@ var Vote = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <tbody>
+                    
                         <PlacesList/>
-                    </tbody>
+                    
                 </table>
             </div>
         );
