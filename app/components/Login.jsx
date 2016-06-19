@@ -10,6 +10,7 @@ var Login = React.createClass({
 
         if(Util.hasUser(username, password)){
             this.props.onLoggedIn(username);
+            this.props.history.push('/');
         }
     },
     render: function(){
