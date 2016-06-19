@@ -1,6 +1,7 @@
 var React = require('react');
 var {Link} = require('react-router');
 var PlacesMock = require('PlacesMock');
+var Util = require('Util');
 
 var PlacesList = React.createClass({
 
