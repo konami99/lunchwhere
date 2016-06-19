@@ -19,7 +19,8 @@ module.exports = {
       Vote: 'app/components/Vote.jsx',
       Chart: 'app/components/Chart.jsx',
       Login: 'app/components/Login.jsx',
-      UsersMock: 'app/components/UsersMock.jsx'
+      UsersMock: 'app/components/UsersMock.jsx',
+      Util: 'app/components/Util.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
