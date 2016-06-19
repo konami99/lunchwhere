@@ -3,13 +3,17 @@ var {Link} = require('react-router');
 var PlacesMock = require('PlacesMock');
 
 var PlacesList = React.createClass({
+
     render: function(){
         var createRow = function(place){
+            function renderOptions(){
+                
+            }
             return (
                 <tr key={place.id}>
-                    <td>11</td>
-                    <td>22</td>
-                    <td>33</td>
+                    <td>{place.title}</td>
+                    <td>{place.description}</td>
+                    <td>{renderOptions()}</td>
                 </tr>
             );
         };
