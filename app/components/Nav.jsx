@@ -14,6 +14,7 @@ var Nav = React.createClass({
     render: function(){
         var that = this;
         var isLoggedIn = this.props.isLoggedIn;
+        var userObj = this.props.userObj;
         function handleLoggedOut(){
             that.logout();
         }
@@ -31,6 +32,15 @@ var Nav = React.createClass({
                 )
             }
         }
+        function renderCreateLink(){
+            if(isLoggedIn && userObj && userObj.role==="admin"){
+                return (
+                    <li>
+                        <Link to="/create" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Create</Link>
+                    </li>
+                )
+            }
+        }
         return (
             <div className="top-bar">
                 <div className="top-bar-left">
@@ -44,9 +54,8 @@ var Nav = React.createClass({
                         <li>
                             <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Chart</Link>
                         </li>
-                        <li>
-                            <Link to="/create" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Create</Link>
-                        </li>
+                        {renderCreateLink()}
+                        
                     </ul>
                 </div>
                 <div className="top-bar-right">
