@@ -3,7 +3,7 @@ var React = require('react');
 var LogoutButton = React.createClass({
     logout: function(e){
         e.preventDefault();
-        console.log('logout');
+        this.props.onLoggedOut();
     },
     render: function(){
         return (

@@ -7,11 +7,19 @@ var Nav = React.createClass({
         e.preventDefault();
         alert('not yet wired up');
     },
+    logout: function(){
+        this.props.onLoggedOut();
+    },
+    
     render: function(){
+        var that = this;
         var isLoggedIn = this.props.isLoggedIn;
+        function handleLoggedOut(){
+            that.logout();
+        }
         function renderLoginButton(){
             if(isLoggedIn){
-                return <LogoutButton/>
+                return <LogoutButton onLoggedOut={handleLoggedOut}/>
             }
             else{
                 return (
