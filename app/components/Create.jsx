@@ -5,8 +5,8 @@ var Util = require('Util');
 var Create = React.createClass({
     onFormSubmit: function(e) {
         e.preventDefault();
-        var title = this.ref.title;
-        var description = this.ref.description;
+        var title = this.refs.title.value;
+        var description = this.refs.description.value;
 
         console.log(title);
         console.log(description);
