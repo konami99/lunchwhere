@@ -1,16 +1,14 @@
 var React = require('react');
 var {Link} = require('react-router');
 var Util = require('Util');
+var PlacesMock = require('PlacesMock');
 
 var Create = React.createClass({
     onFormSubmit: function(e) {
         e.preventDefault();
         var title = this.refs.title.value;
         var description = this.refs.description.value;
-
-        console.log(title);
-        console.log(description);
-        //Util.insertPlace()
+        Util.insertPlace(title, description);
     },
     render: function(){
         return (
