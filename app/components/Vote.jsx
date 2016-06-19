@@ -7,9 +7,10 @@ var VoteButton = require('VoteButton');
 var PlacesList = React.createClass({
 
     render: function(){
+        var userObj = this.props.userObj;
         var createRow = function(place){
             function renderOptions(){
-                console.log(this.props.userObj);
+                console.log(userObj);
             }
             return (
                 <tr key={place.id}>
@@ -25,7 +26,7 @@ var PlacesList = React.createClass({
 
 var Vote = React.createClass({
     render: function(){
-        var userObj = this.prop.userObj;
+        var userObj = this.props.userObj;
         return (
             <div>
                 <table>
@@ -36,7 +37,7 @@ var Vote = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <PlacesList/>
+                    <PlacesList userObj={userObj}/>
                 </table>
             </div>
         );
