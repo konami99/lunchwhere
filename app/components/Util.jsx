@@ -11,8 +11,14 @@ var Util =
         return null;
     },
 
-    insertPlace: function(){
-
+    insertPlace: function(title, description){
+        PlacesMock.push(
+            {
+                id: (PlacesMock.length+1),
+                title: title,
+                description: description
+            }
+        )
     }
 }
 
