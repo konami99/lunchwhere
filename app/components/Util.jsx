@@ -2,13 +2,13 @@ var UsersMock = require('UsersMock');
 
 var Util = 
 {
-    hasUser: function(username, password){
+    getUser: function(username, password){
         for(var i=0; i<UsersMock.length; i++){
             if(UsersMock[i].username===username && UsersMock[i].password===password){
-                return true;
+                return UsersMock[i];
             }
         }
-        return false;
+        return null;
     }
 }
 

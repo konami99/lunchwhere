@@ -5,13 +5,18 @@ var {RouteHandler} = require('react-router');
 var Main = React.createClass({
     getInitialState: function() {
         return {
-            isLoggedIn: false
+            isLoggedIn: false,
+            userid: '',
+            username: ''
         }
     },
-    handleLoggedIn: function(){
-        console.log('handleLoggedIn');
+    handleLoggedIn: function(id, username){
+        console.log(id);
+        console.log(username);
         this.setState({
-            isLoggedIn: true
+            isLoggedIn: true,
+            userid: id,
+            username: username
         });
     },
     render: function(){

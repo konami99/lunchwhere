@@ -8,8 +8,9 @@ var Login = React.createClass({
         var username = this.refs.username.value;
         var password = this.refs.password.value;
 
-        if(Util.hasUser(username, password)){
-            this.props.onLoggedIn(username);
+        var user = Util.getUser(username, password);
+        if(user){
+            this.props.onLoggedIn(user.id, user.username);
             this.props.history.push('/');
         }
     },
