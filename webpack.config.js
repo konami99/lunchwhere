@@ -23,7 +23,8 @@ module.exports = {
       UsersMock: 'app/components/UsersMock.jsx',
       PlacesMock: 'app/components/PlacesMock.jsx',
       Util: 'app/components/Util.jsx',
-      LogoutButton: 'app/components/LogoutButton.jsx'
+      LogoutButton: 'app/components/LogoutButton.jsx',
+      VoteButton: 'app/components/VoteButton.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
