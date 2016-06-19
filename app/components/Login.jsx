@@ -9,7 +9,7 @@ var Login = React.createClass({
         var password = this.refs.password.value;
 
         if(Util.hasUser(username, password)){
-            console.log('has user');
+            this.props.onLoggedIn(username);
         }
     },
     render: function(){
