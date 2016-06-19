@@ -10,11 +10,15 @@ var Main = React.createClass({
     },
     handleLoggedIn: function(){
         console.log('handleLoggedIn');
+        this.setState({
+            isLoggedIn: true
+        });
     },
     render: function(){
+        var isLoggedIn = this.state.isLoggedIn;
         return (
             <div>
-                <Nav/>
+                <Nav isLoggedIn={isLoggedIn}/>
                 <div className="row">
                     <div className="columns medium-6 large-6 small-centered">
                         {React.cloneElement(this.props.children, {onLoggedIn: this.handleLoggedIn})}

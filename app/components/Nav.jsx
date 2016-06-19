@@ -7,6 +7,21 @@ var Nav = React.createClass({
         alert('not yet wired up');
     },
     render: function(){
+        var isLoggedIn = this.props.isLoggedIn;
+        function renderLoginButton(){
+            if(isLoggedIn){
+                return <div>Logout</div>
+            }
+            else{
+                return (
+                    <ul className="menu">
+                        <li>
+                            <Link to="/login" className="button">Login</Link>
+                        </li>
+                    </ul>
+                )
+            }
+        }
         return (
             <div className="top-bar">
                 <div className="top-bar-left">
@@ -23,11 +38,8 @@ var Nav = React.createClass({
                     </ul>
                 </div>
                 <div className="top-bar-right">
-                    <ul className="menu">
-                        <li>
-                            <Link to="/login" className="button">Login</Link>
-                        </li>
-                    </ul>
+                    {renderLoginButton()}
+                    
                 </div>
             </div>
         );
