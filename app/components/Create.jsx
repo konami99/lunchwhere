@@ -2,19 +2,39 @@ var React = require('react');
 var {Link} = require('react-router');
 
 var Create = React.createClass({
+    onFormSubmit: function(e) {
+        e.preventDefault();
+        
+    },
     render: function(){
         return (
             <div>
-                <h1 className="text-center">Create</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. In sed lorem vel odio ornare suscipit. Pellentesque mi nulla, rhoncus ac mauris sit amet, tempor sagittis mi. Proin id eleifend nisi, sit amet pretium ex. Donec ac velit eu elit bibendum congue in id mauris. Ut pulvinar lacinia sollicitudin. Cras mattis dui vitae purus tincidunt maximus. Curabitur bibendum vitae sem vitae viverra. Nulla dictum sapien nibh, ut euismod mauris dictum ac. Duis quis ligula sit amet mauris eleifend convallis quis sed turpis. Cras imperdiet felis non velit condimentum, scelerisque facilisis nunc condimentum. Donec varius odio eget ex dignissim varius.</p>
-                <ol>
-                    <li>
-                        <Link to='/?location=Sydney'>Sydney</Link>
-                    </li>
-                    <li>    
-                        <Link to='/?location=Melbourne'>Melbourne</Link>
-                    </li>
-                </ol>
+                <form onSubmit={this.onFormSubmit}>
+                    <div className="row">
+                        <div className="small-3 columns">
+                            <label className="text-right middle">Title</label>
+                        </div>
+                        <div className="small-9 columns">
+                            <input type="text" id="middle-label" ref="title"/>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="small-3 columns">
+                            <label className="text-right middle">Description</label>
+                        </div>
+                        <div className="small-9 columns">
+                            <textarea placeholder="None" rows="20"></textarea>
+                        </div>
+                    </div>
+                    <div className="row">
+                        <div className="small-3 columns">
+                            
+                        </div>
+                        <div className="small-9 columns">
+                            <button type="submit" className="hollow button">Create</button>
+                        </div>
+                    </div>
+                </form>
             </div>
         );
     }
