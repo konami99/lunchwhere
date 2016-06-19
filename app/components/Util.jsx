@@ -12,6 +12,15 @@ var Util =
         return null;
     },
 
+    getPlace: function(placeId){
+        for(var i=0;i<PlacesMock.length;i++){
+            if(PlacesMock[i].id===placeId){
+                return PlacesMock[i];
+            }
+        }
+        return null;
+    },
+
     insertPlace: function(title, description){
         PlacesMock.push(
             {
@@ -23,7 +32,11 @@ var Util =
     },
 
     addVote: function(placeId, userId){
-        
+        for(var i=0;i<PlacesMock.length;i++){
+            if(PlacesMock[i].id===placeId){
+                PlacesMock[i].votes.push(userId);
+            }
+        }
     }
 }
 

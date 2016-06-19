@@ -1,18 +1,27 @@
 var React = require('react');
 var Util = require('Util');
 
-var LogoutButton = React.createClass({
+var VoteButton = React.createClass({
+    getInitialState: function(){
+        var initialVoteCount = Util.getPlace(this.props.placeId).votes.length;
+        return {
+            voteCount: initialVoteCount
+        }
+    },
     onClickEvent: function(e){
         e.preventDefault();
         var placeId = this.props.placeId;
         var userId = this.props.userId;
-        console.log("i'm in votebutton. placeid= "+placeId+" ,userId= "+userId);
+        Util.addVote(placeId, userId);
+        this.setState({
+            voteCount: Util.getPlace(placeId).votes.length
+        });
     },
     render: function(){
         
         return (
-            <button type="button" onClick={this.onClickEvent} className="hollow button">Vote</button>      
+            <button type="button" onClick={this.onClickEvent} className="hollow button">Vote ({this.state.voteCount})</button>      
         );
     }
 })
-module.exports = LogoutButton;
+module.exports = VoteButton;
