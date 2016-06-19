@@ -20,6 +20,10 @@ var Util =
                 description: description
             }
         )
+    },
+
+    addVote: function(placeId, userId){
+        
     }
 }
 

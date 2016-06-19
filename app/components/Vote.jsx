@@ -9,13 +9,13 @@ var PlacesList = React.createClass({
     render: function(){
         var createRow = function(place){
             function renderOptions(){
-                
+                console.log(this.props.userObj);
             }
             return (
                 <tr key={place.id}>
                     <td>{place.title}</td>
                     <td>{place.description}</td>
-                    <td><VoteButton placeId={place.id}/></td>
+                    <td><VoteButton placeId={place.id}/>{renderOptions()}</td>
                 </tr>
             );
         };
@@ -25,6 +25,7 @@ var PlacesList = React.createClass({
 
 var Vote = React.createClass({
     render: function(){
+        var userObj = this.prop.userObj;
         return (
             <div>
                 <table>
