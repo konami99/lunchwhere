@@ -5,6 +5,7 @@ var Main = require('Main');
 var Vote = require('Vote');
 var Chart = require('Chart');
 var Login = require('Login');
+var Create = require('Create');
 
 require('style!css!foundation-sites/dist/foundation.min.css')
 $(document).foundation();
@@ -17,6 +18,7 @@ ReactDOM.render(
       <IndexRoute component={Vote}/>
       <Route path="about" component={Chart}/>
       <Route path="login" component={Login}/>
+      <Route path="create" component={Create}/>
     </Route>
   </Router>,
   document.getElementById('app')

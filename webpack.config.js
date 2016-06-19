@@ -18,6 +18,7 @@ module.exports = {
       Nav: 'app/components/Nav.jsx',
       Vote: 'app/components/Vote.jsx',
       Chart: 'app/components/Chart.jsx',
+      Create: 'app/components/Create.jsx',
       Login: 'app/components/Login.jsx',
       UsersMock: 'app/components/UsersMock.jsx',
       Util: 'app/components/Util.jsx',
