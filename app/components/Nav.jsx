@@ -1,5 +1,6 @@
 var React = require('react');
 var {Link, IndexLink} = require('react-router');
+var LogoutButton = require('LogoutButton');
 
 var Nav = React.createClass({
     onSearch: function(e){
@@ -10,7 +11,7 @@ var Nav = React.createClass({
         var isLoggedIn = this.props.isLoggedIn;
         function renderLoginButton(){
             if(isLoggedIn){
-                return <div>Logout</div>
+                return <LogoutButton/>
             }
             else{
                 return (
@@ -39,7 +40,6 @@ var Nav = React.createClass({
                 </div>
                 <div className="top-bar-right">
                     {renderLoginButton()}
-                    
                 </div>
             </div>
         );

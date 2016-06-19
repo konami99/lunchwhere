@@ -20,7 +20,8 @@ module.exports = {
       Chart: 'app/components/Chart.jsx',
       Login: 'app/components/Login.jsx',
       UsersMock: 'app/components/UsersMock.jsx',
-      Util: 'app/components/Util.jsx'
+      Util: 'app/components/Util.jsx',
+      LogoutButton: 'app/components/LogoutButton.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
