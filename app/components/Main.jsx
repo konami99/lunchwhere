@@ -6,22 +6,20 @@ var Main = React.createClass({
     getInitialState: function() {
         return {
             isLoggedIn: false,
-            userid: '',
-            username: ''
+            user: ''
         }
     },
-    handleLoggedIn: function(id, username){
+    handleLoggedIn: function(userObj){
+        console.log(userObj);
         this.setState({
             isLoggedIn: true,
-            userid: id,
-            username: username
+            user: userObj
         });
     },
     handleLoggedOut: function(){
         this.setState({
             isLoggedIn: false,
-            userid: '',
-            username: ''
+            user: ''
         });
     },
     render: function(){
