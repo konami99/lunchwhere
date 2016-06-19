@@ -1,23 +1,11 @@
 var React = require('react');
 var Nav = require('Nav');
 
+
 var Main = React.createClass({
     getInitialState: function() {
         return {
-            isLoggedIn: false,
-            users: [
-                {
-                    username: "admin",
-                    password: "12345",
-                    type: "admin"
-                },
-                {
-                    username: "user1",
-                    password: "apple",
-                    type: "normal"
-                }
-            ],
-            votes: []
+            isLoggedIn: false
         }
     },
     render: function(){

@@ -1,10 +1,11 @@
 var React = require('react');
 var {Link} = require('react-router');
+var UsersMock = require('UsersMock');
 
 var Login = React.createClass({
     onFormSubmit: function(e) {
         e.preventDefault();
-        alert('submit');
+        
     },
     render: function(){
         return (
