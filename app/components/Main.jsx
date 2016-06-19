@@ -8,11 +8,8 @@ var Main = React.createClass({
             isLoggedIn: false
         }
     },
-    handle: function(){
-        console.log('here');
-    },
-    onLoggedIn: function(){
-        console.log('here');
+    handleLoggedIn: function(){
+        console.log('handleLoggedIn');
     },
     render: function(){
         return (
@@ -20,7 +17,7 @@ var Main = React.createClass({
                 <Nav/>
                 <div className="row">
                     <div className="columns medium-6 large-6 small-centered">
-                        {React.cloneElement(this.props.children, {onLoggedIn: this.handle})}
+                        {React.cloneElement(this.props.children, {onLoggedIn: this.handleLoggedIn})}
                     </div>
                 </div>
                 
