@@ -34,9 +34,7 @@ var Vote = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    
-                        <PlacesList/>
-                    
+                    <PlacesList/>
                 </table>
             </div>
         );
