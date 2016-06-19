@@ -1,19 +1,3 @@
-var UsersMock = [
-                    {
-                        id: 1,
-                        username: "admin",
-                        password: "12345",
-                        role: "admin"
-                    },
-                    {
-                        id: 2,
-                        username: "user1",
-                        password: "apple",
-                        role: "normal"
-                    }
-                ];
-
-
 var PlacesMock = [
     {
         id: 1,
@@ -25,7 +9,6 @@ var PlacesMock = [
     }
 
 
-]
+];
 
-module.exports = UsersMock;
 module.exports = PlacesMock;

@@ -1,4 +1,5 @@
-var {UsersMock, PlacesMock} = require('MockObjects');
+var PlacesMock = require('PlacesMock');
+var UsersMock = require('UsersMock');
 
 var Util = 
 {
