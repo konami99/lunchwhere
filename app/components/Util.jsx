@@ -1,4 +1,4 @@
-var UsersMock = require('MockObjects');
+var {UsersMock, PlacesMock} = require('MockObjects');
 
 var Util = 
 {
@@ -9,6 +9,10 @@ var Util =
             }
         }
         return null;
+    },
+
+    insertPlace: function(){
+
     }
 }
 
