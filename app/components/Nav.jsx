@@ -23,13 +23,11 @@ var Nav = React.createClass({
                     </ul>
                 </div>
                 <div className="top-bar-right">
-                    <form onSubmit={this.onSearch}>
-                        <ul className="menu">
-                            <li>
-                                <input type="submit" className="button" value="Login" />
-                            </li>
-                        </ul>
-                    </form>
+                    <ul className="menu">
+                        <li>
+                            <Link to="/login" className="button">Login</Link>
+                        </li>
+                    </ul>
                 </div>
             </div>
         );

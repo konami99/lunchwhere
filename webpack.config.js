@@ -18,6 +18,7 @@ module.exports = {
       Nav: 'app/components/Nav.jsx',
       Vote: 'app/components/Vote.jsx',
       Chart: 'app/components/Chart.jsx',
+      Login: 'app/components/Login.jsx'
     },
     extensions: ['', '.js', '.jsx']
   },
