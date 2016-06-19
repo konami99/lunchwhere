@@ -1,4 +1,4 @@
-var UsersMock = require('UsersMock');
+var UsersMock = require('MockObjects');
 
 var Util = 
 {
