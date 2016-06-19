@@ -8,8 +8,9 @@ var Login = React.createClass({
         var username = this.refs.username.value;
         var password = this.refs.password.value;
 
-        console.log(username);
-        console.log(password);
+        if(Util.hasUser(username, password)){
+            console.log('has user');
+        }
     },
     render: function(){
         return (
