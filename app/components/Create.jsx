@@ -37,7 +37,7 @@ var Create = React.createClass({
                             
                         </div>
                         <div className="small-9 columns">
-                            <button type="submit" className="hollow button">Create</button>
+                            <button type="submit" className="button">Create</button>
                         </div>
                     </div>
                 </form>

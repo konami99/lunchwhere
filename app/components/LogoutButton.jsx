@@ -10,7 +10,7 @@ var LogoutButton = React.createClass({
         return (
             <div>
                 <form onSubmit={this.logout}>
-                    <button type="submit" className="hollow button">({username}) Logout</button>
+                    <button type="submit" className="button">({username}) Logout</button>
                 </form>
             </div>
         );

@@ -39,7 +39,7 @@ var Login = React.createClass({
                             
                         </div>
                         <div className="small-9 columns">
-                            <button type="submit" className="hollow button">Login</button>
+                            <button type="submit" className="button">Login</button>
                         </div>
                     </div>
                 </form>

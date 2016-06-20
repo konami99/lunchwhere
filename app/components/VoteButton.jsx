@@ -21,7 +21,7 @@ var VoteButton = React.createClass({
     render: function(){
         
         return (
-            <button type="button" onClick={this.onClickEvent} className="hollow button">Vote ({this.state.voteCount})</button>      
+            <button type="button" onClick={this.onClickEvent} className="button">Vote ({this.state.voteCount})</button>      
         );
     }
 })
