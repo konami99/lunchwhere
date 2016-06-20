@@ -9,7 +9,7 @@ var PlacesList = React.createClass({
         PlacesMock = PlacesMock;
     },
     render: function(){
-        var userObj = this.props.userObj;
+        var userId = this.props.userId;
         var createRow = function(place){
             function renderOptions(){
                 console.log(userObj);
@@ -18,7 +18,7 @@ var PlacesList = React.createClass({
                 <tr key={place.id}>
                     <td>{place.title}</td>
                     <td>{place.description}</td>
-                    <td><VoteButton placeId={place.id} userId={userObj.id}/></td>
+                    <td><VoteButton placeId={place.id} userId={userId}/></td>
                 </tr>
             );
         };
@@ -39,7 +39,7 @@ var Vote = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <PlacesList userObj={userObj}/>
+                    <PlacesList userId={userObj.id}/>
                 </table>
             </div>
         );
