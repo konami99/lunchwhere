@@ -20,7 +20,7 @@ var Nav = React.createClass({
         }
         function renderLoginButton(){
             if(isLoggedIn){
-                return <LogoutButton onLoggedOut={handleLoggedOut}/>
+                return <LogoutButton username={userObj.username} onLoggedOut={handleLoggedOut}/>
             }
             else{
                 return (

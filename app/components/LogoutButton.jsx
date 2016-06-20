@@ -6,10 +6,11 @@ var LogoutButton = React.createClass({
         this.props.onLoggedOut();
     },
     render: function(){
+        var username = this.props.username;
         return (
             <div>
                 <form onSubmit={this.logout}>
-                    <button type="submit" className="hollow button">Logout</button>
+                    <button type="submit" className="hollow button">({username}) Logout</button>
                 </form>
             </div>
         );
