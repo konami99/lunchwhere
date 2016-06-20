@@ -26,7 +26,6 @@ var PlacesList = React.createClass({
                     <td>{place.description}</td>
                     <td>
                         {renderVoteButton(place)}
-                        
                     </td>
                 </tr>
             );
