@@ -9,8 +9,7 @@ var Create = React.createClass({
         var name = this.refs.name.value;
         var description = this.refs.description.value;
         Util.insertPlace(name, description);
-        console.log('added');
-        console.log(PlacesMock);
+        this.props.history.push('/');
     },
     render: function(){
         return (
