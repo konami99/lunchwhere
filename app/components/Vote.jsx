@@ -1,8 +1,4 @@
 var React = require('react');
-var {Link} = require('react-router');
-
-var Util = require('Util');
-
 var PlacesList = require('PlacesList');
 
 
