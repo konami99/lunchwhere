@@ -46,6 +46,7 @@ var Util =
             return placeB.votes.length - placeA.votes.length;
         });
         console.log(PlacesMockClone);
+        return PlacesMockClone;
     }
 
 }
