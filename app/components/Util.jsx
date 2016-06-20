@@ -45,7 +45,6 @@ var Util =
         PlacesMockClone.sort(function(placeA, placeB){
             return placeB.votes.length - placeA.votes.length;
         });
-        console.log(PlacesMockClone);
         return PlacesMockClone;
     }
 

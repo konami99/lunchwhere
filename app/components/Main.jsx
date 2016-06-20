@@ -10,7 +10,6 @@ var Main = React.createClass({
         }
     },
     handleLoggedIn: function(userObj){
-        console.log(userObj);
         this.setState({
             isLoggedIn: true,
             user: userObj
