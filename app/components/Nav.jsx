@@ -36,7 +36,7 @@ var Nav = React.createClass({
             if(isLoggedIn && userObj && userObj.role==="admin"){
                 return (
                     <li>
-                        <Link to="/create" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Create a new Place</Link>
+                        <Link to="/create" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Create a New Place</Link>
                     </li>
                 )
             }
