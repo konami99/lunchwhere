@@ -5,7 +5,9 @@ var Util = require('Util');
 var VoteButton = require('VoteButton');
 
 var PlacesList = React.createClass({
-
+    componentWillMount: function(){
+        PlacesMock = PlacesMock;
+    },
     render: function(){
         var userObj = this.props.userObj;
         var createRow = function(place){

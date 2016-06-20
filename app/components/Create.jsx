@@ -9,6 +9,8 @@ var Create = React.createClass({
         var title = this.refs.title.value;
         var description = this.refs.description.value;
         Util.insertPlace(title, description);
+        console.log('added');
+        console.log(PlacesMock);
     },
     render: function(){
         return (
