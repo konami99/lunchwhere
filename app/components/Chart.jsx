@@ -4,9 +4,6 @@ var Util = require('Util');
 var PlacesList = require('PlacesList');
 
 var Chart = React.createClass({
-    componentWillMount: function(){
-        //orderedPlacesObj = Util.orderPlacesByVotes();
-    },
     render: function(){
         var orderedPlacesObj = Util.orderPlacesByVotes();
         return (
