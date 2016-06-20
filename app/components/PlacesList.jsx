@@ -17,9 +17,6 @@ var PlacesList = React.createClass({
         }
 
         var createRow = function(place){
-            function renderOptions(){
-                console.log(userObj);
-            }
             return (
                 <tr key={place.id}>
                     <td>{place.title}</td>
