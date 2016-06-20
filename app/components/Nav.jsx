@@ -52,7 +52,7 @@ var Nav = React.createClass({
                             <IndexLink to="/" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Vote</IndexLink>
                         </li>
                         <li>
-                            <Link to="/about" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Chart</Link>
+                            <Link to="/chart" activeClassName="active" activeStyle={{fontWeight: 'bold'}}>Chart</Link>
                         </li>
                         {renderCreateLink()}
                         

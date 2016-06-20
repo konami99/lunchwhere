@@ -16,7 +16,7 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Vote}/>
-      <Route path="about" component={Chart}/>
+      <Route path="chart" component={Chart}/>
       <Route path="login" component={Login}/>
       <Route path="create" component={Create}/>
     </Route>

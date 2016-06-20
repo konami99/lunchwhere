@@ -17,7 +17,6 @@ var Chart = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <PlacesList userId="" placesObj={orderedPlacesObj}/>
                 </table>
             </div>
         );
