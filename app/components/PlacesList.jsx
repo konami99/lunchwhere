@@ -8,11 +8,15 @@ var PlacesList = React.createClass({
         var placesObj = this.props.placesObj;
 
         function renderVoteButton(place){
-            if(userId !== ""){
+            console.log(userId);
+            if(!isNaN(parseFloat(userId)) && isFinite(userId)){ //is numeric
                 return <VoteButton placeId={place.id} userId={userId}/>
             }
-            else{
+            else if(userId===""){
                 return <div>{place.votes.length} votes</div>
+            }
+            else{
+                return <div></div>
             }
         }
 
