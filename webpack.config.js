@@ -20,6 +20,7 @@ module.exports = {
       Chart: 'app/components/Chart.jsx',
       Create: 'app/components/Create.jsx',
       Login: 'app/components/Login.jsx',
+      PlacesList: 'app/components/PlacesList.jsx',
       UsersMock: 'app/components/UsersMock.jsx',
       PlacesMock: 'app/components/PlacesMock.jsx',
       Util: 'app/components/Util.jsx',
