@@ -16,6 +16,7 @@ var VoteButton = React.createClass({
         this.setState({
             voteCount: Util.getPlace(placeId).votes.length
         });
+        Util.orderPlacesByVotes();
     },
     render: function(){
         

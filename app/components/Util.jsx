@@ -38,7 +38,16 @@ var Util =
                 PlacesMock[i].votes.push(userId);
             }
         }
+    },
+
+    orderPlacesByVotes: function(){
+        var PlacesMockClone = PlacesMock.slice(0);
+        PlacesMockClone.sort(function(placeA, placeB){
+            return placeB.votes.length - placeA.votes.length;
+        });
+        console.log(PlacesMockClone);
     }
+
 }
 
 module.exports = Util;
