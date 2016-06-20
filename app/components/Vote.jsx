@@ -1,8 +1,11 @@
 var React = require('react');
 var PlacesList = require('PlacesList');
-
+var PlacesMock = require('PlacesMock');
 
 var Vote = React.createClass({
+    componentWillMount: function(){
+        PlacesMock = PlacesMock;
+    },
     render: function(){
         var userObj = this.props.userObj;
         return (
@@ -15,7 +18,7 @@ var Vote = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <PlacesList userId={userObj.id}/>
+                    <PlacesList userId={userObj.id} placesObj={PlacesMock}/>
                 </table>
             </div>
         );

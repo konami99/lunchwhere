@@ -1,13 +1,11 @@
 var React = require('react');
-var PlacesMock = require('PlacesMock');
 var VoteButton = require('VoteButton');
 
 var PlacesList = React.createClass({
-    componentWillMount: function(){
-        PlacesMock = PlacesMock;
-    },
+    
     render: function(){
         var userId = this.props.userId;
+        var placesObj = this.props.placesObj;
         var createRow = function(place){
             function renderOptions(){
                 console.log(userObj);
@@ -20,7 +18,7 @@ var PlacesList = React.createClass({
                 </tr>
             );
         };
-        return <tbody>{PlacesMock.map(createRow)}</tbody>;
+        return <tbody>{placesObj.map(createRow)}</tbody>;
     }
 });
 
