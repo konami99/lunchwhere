@@ -1,7 +1,11 @@
 var React = require('react');
 var {Link} = require('react-router');
+var Util = require('Util');
 
 var Chart = React.createClass({
+    componentWillMount: function(){
+        var orderedPlacesObj = Util.orderPlacesByVotes();
+    },
     render: function(){
         return (
             <div>
@@ -13,7 +17,7 @@ var Chart = React.createClass({
                             <th width="150">Options</th>
                         </tr>
                     </thead>
-                    <PlacesList/>
+                    <PlacesList userId="" placesObj={orderedPlacesObj}/>
                 </table>
             </div>
         );

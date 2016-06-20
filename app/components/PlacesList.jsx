@@ -6,6 +6,16 @@ var PlacesList = React.createClass({
     render: function(){
         var userId = this.props.userId;
         var placesObj = this.props.placesObj;
+
+        function renderVoteButton(place){
+            if(userId !== ""){
+                return <VoteButton placeId={place.id} userId={userId}/>
+            }
+            else{
+                return <div>{place.votes.length} votes</div>
+            }
+        }
+
         var createRow = function(place){
             function renderOptions(){
                 console.log(userObj);
@@ -14,7 +24,10 @@ var PlacesList = React.createClass({
                 <tr key={place.id}>
                     <td>{place.title}</td>
                     <td>{place.description}</td>
-                    <td><VoteButton placeId={place.id} userId={userId}/></td>
+                    <td>
+                        {renderVoteButton(place)}
+                        
+                    </td>
                 </tr>
             );
         };
