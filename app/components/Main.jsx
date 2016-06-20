@@ -28,8 +28,9 @@ var Main = React.createClass({
         return (
             <div>
                 <Nav isLoggedIn={isLoggedIn} onLoggedOut={this.handleLoggedOut} userObj={user}/>
+                <div style={{height: 100 + 'px'}}></div>
                 <div className="row">
-                    <div className="columns medium-6 large-6 small-centered">
+                    <div className="columns medium-10 large-10 small-centered">
                         {React.cloneElement(this.props.children, {onLoggedIn: this.handleLoggedIn, userObj:user})}
                     </div>
                 </div>
