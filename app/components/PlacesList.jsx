@@ -16,7 +16,7 @@ var PlacesList = React.createClass({
                 return <div>{place.votes.length} votes</div>
             }
             else{
-                return <div></div>
+                return <div><a className="disabled button" href="#">You have to login to vote</a></div>
             }
         }
 
