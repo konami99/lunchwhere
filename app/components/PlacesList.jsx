@@ -23,7 +23,7 @@ var PlacesList = React.createClass({
         var createRow = function(place){
             return (
                 <tr key={place.id}>
-                    <td>{place.title}</td>
+                    <td>{place.name}</td>
                     <td>{place.description}</td>
                     <td>
                         {renderVoteButton(place)}

@@ -21,11 +21,11 @@ var Util =
         return null;
     },
 
-    insertPlace: function(title, description){
+    insertPlace: function(name, description){
         PlacesMock.push(
             {
                 id: (PlacesMock.length+1),
-                title: title,
+                name: name,
                 description: description,
                 votes: []
             }

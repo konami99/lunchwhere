@@ -6,9 +6,9 @@ var PlacesMock = require('PlacesMock');
 var Create = React.createClass({
     onFormSubmit: function(e) {
         e.preventDefault();
-        var title = this.refs.title.value;
+        var name = this.refs.name.value;
         var description = this.refs.description.value;
-        Util.insertPlace(title, description);
+        Util.insertPlace(name, description);
         console.log('added');
         console.log(PlacesMock);
     },
@@ -18,10 +18,10 @@ var Create = React.createClass({
                 <form onSubmit={this.onFormSubmit}>
                     <div className="row">
                         <div className="small-3 columns">
-                            <label className="text-right middle">Title</label>
+                            <label className="text-right middle">Name</label>
                         </div>
                         <div className="small-9 columns">
-                            <input type="text" id="middle-label" ref="title"/>
+                            <input type="text" id="middle-label" ref="name"/>
                         </div>
                     </div>
                     <div className="row">
